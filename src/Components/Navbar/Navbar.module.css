@@ -1,0 +1,17 @@
+.Navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Routes {
+    display: flex;
+    list-style: none;
+
+}
+
+.Routes li {
+    margin: 0 0.8rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+    letter-spacing: 0.2rem;
+}
