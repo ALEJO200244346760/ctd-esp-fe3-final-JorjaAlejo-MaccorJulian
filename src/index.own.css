@@ -1,0 +1,35 @@
+:root {
+    --color-primary: #ffffff;
+    --color-secondary: antiquewhite;
+    --color-tertiary: #533232;
+    --color-text: #000000;
+    --color-rainbow-1: orange;
+    --color-rainbow-2: rgb(189, 132, 28);
+    --color-rainbow-3: rgb(189, 149, 74);
+    --color-rainbow-4: rgb(154, 147, 54);
+    --color-rainbow-5: rgb(128, 168, 76);
+}
+
+body, body * {
+    line-height: 1.1;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.caption {
+    text-align: start;
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: rgb(73, 73, 73);
+    letter-spacing: 0.3rem;
+}
+
+.label {
+    text-align: start;
+    font-size: 1rem;
+    color: var(--color-text);
+}
+
+.bold {
+    font-weight: bold;
+}

@@ -11,6 +11,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
 .favButton{
   background-color: rgba(136, 136, 136, 0.116);
   padding: 10px;
@@ -49,13 +50,14 @@ footer {
   bottom: 0;
   width: 90%;
   height: 40px;
-  /* margin-top: 2rem; */
+  margin-top: 2rem;
 }
 
 footer > img{
   width: 200px;
   margin: 0;
 }
+
 footer > p{
   margin: 0;
   padding-top: 0.7rem;

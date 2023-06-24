@@ -8,6 +8,7 @@ import router from './Components/utils/react-router.config';
 
 //Global Styles
 import './index.css';
+import './index.own.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
