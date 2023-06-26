@@ -1,0 +1,19 @@
+.Divider {
+    width: 90%;
+    height: 1px;
+    margin: 0 auto;
+}
+
+.Divider > * {
+    position: absolute;
+    bottom: 0;
+    background-color: var(--color-background);
+    border-radius: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    transform: translateX(-50%) translateY(50%);
+    display: flex;
+    transition: width ease-in-out 0.3s 0.15s, height ease-in-out 0.3s 0.15s;
+}
+
