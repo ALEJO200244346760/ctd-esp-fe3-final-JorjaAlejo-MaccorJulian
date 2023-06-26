@@ -14,6 +14,7 @@
     height: 40px;
     transform: translateX(-50%) translateY(50%);
     display: flex;
+    justify-content: center;
     transition: width ease-in-out 0.3s 0.15s, height ease-in-out 0.3s 0.15s;
 }
 
