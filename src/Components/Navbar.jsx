@@ -23,10 +23,6 @@ const routes = [
     name: "Favs",
   },
   {
-    path: "/detail",
-    name: "Detail",
-  },
-  {
     path: "/contact",
     name: "Contact",
   },
@@ -53,7 +49,7 @@ const Navbar = () => {
         </ul>
 
         {/* Deberan implementar ademas la logica para cambiar de Theme con el button */}
-        <button onClick={changeTheme}>Change theme</button>
+        <button className='btn-theme' onClick={changeTheme}>Change theme</button>
       </nav>
       <Divider variant="primary">
             <div>

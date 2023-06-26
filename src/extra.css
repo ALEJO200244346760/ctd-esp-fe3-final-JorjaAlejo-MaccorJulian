@@ -5,10 +5,11 @@ body, body * {
 }
 
 .caption {
+    --color : color-mix(in srgb, rgb(165, 147, 147) 50%, var(--color-text));
     text-align: start;
     font-size: 0.7rem;
     font-weight: bold;
-    color: rgb(73, 73, 73);
+    color: var(--color);
     letter-spacing: 0.3rem;
 }
 
@@ -20,4 +21,18 @@ body, body * {
 
 .bold {
     font-weight: bold;
+}
+
+button {
+    --background : color-mix(in srgb, var(--color-primary) 45%, var(--color-accent));
+    color: white;
+    box-shadow: 0 0 10px -5px var(--color-accent);
+    background-color: var(--background);
+    border-top: 1px solid var(--color-primary);
+    border-right: 1px solid var(--color-primary);
+    border-left: 1px solid var(--color-primary);
+    border-bottom: 2px solid var(--color-primary);
+    padding: 7px 12px;
+    border-radius: 5px;
+    cursor: pointer;
 }

@@ -4,7 +4,7 @@
     --color-accent: #3ab286;
     --color-background: #ffffff;
     --color-paper: #dde4e5;
-    --color-text: #000000;
+    --color-text: #000000e5;
 
     --color-rainbow-1: #3aa2b2;
     --color-rainbow-2: #14ceb5;
@@ -19,20 +19,22 @@
 }
 
 .App:is( .dark ) {
-    --color-primary: #3a66b2;
-    --color-secondary: #3aa2b2;
-    --color-accent: #3ab286;
-    --color-background: #114f57;
-    --color-paper: #dde4e5;
-    --color-text: #000000;
+    --color-primary: #4469a8;
+    --color-secondary: #13a3b9;
+    --color-accent: #06b474;
+    --color-background: #18191a;
+    --color-paper: #4e767c;
+    --color-text: #ffffffe5;
 
-    --color-rainbow-1: #3aa2b2;
-    --color-rainbow-2: rgb(189, 132, 28);
-    --color-rainbow-3: rgb(189, 149, 74);
-    --color-rainbow-4: rgb(154, 147, 54);
+    --color-rainbow-1: #178899;
+    --color-rainbow-2: #0c7c6d;
+    --color-rainbow-3: #4b9454;
+    --color-rainbow-4: #3d8f66;
     --color-rainbow-5: #3ab286;
+    background-color: var(--color-background);
 }
 
 .App > main {
     flex-grow: 1;
 }
+

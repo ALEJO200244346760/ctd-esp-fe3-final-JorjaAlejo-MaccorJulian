@@ -2,13 +2,21 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding-bottom: 1.3rem;
+    background: var(--color-background);
+    transition: background ease-in-out 0.2s 0.15s;
+    z-index: -1;
+}
+
+.Navbar:hover {
+    --background : color-mix(in srgb, var(--color-secondary) 65%, transparent);
+    background: var(--background);
 }
 
 .Routes {
     display: flex;
     list-style: none;
-
 }
 
 .Header {
@@ -22,27 +30,27 @@
     letter-spacing: 0.1rem;
 }
 
+.Routes li a {
+    text-decoration: none;
+    color: var(--color-text);
+}
+
 /* Navbar Animation */
 
 .Divider {
     transition: 
-        width ease-in-out 0.3s,
-        box-shadow ease-in-out 0.3s 0.3s
+        width ease-in-out 0.2s,
+        box-shadow ease-in-out 0.2s 0.15s
     ;
 }
 
 .Navbar:hover + .Divider {
-    --shadow-color: color-mix(in srgb, var(--color-accent) 15%, transparent);
+    --shadow-color: color-mix(in srgb, var(--color-accent) 45%, transparent);
     width: 100%;
-    box-shadow: 0 -15px 40px 15px var(--shadow-color); 
+    box-shadow: 0 -20px 40px 15px var(--shadow-color); 
 }
 
 .Navbar:hover + .Divider > * {
     width: 0;
     height: 0;
-}
-
-
-.Navbar {
-
 }

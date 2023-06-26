@@ -15,6 +15,9 @@
     transform: translateX(-50%) translateY(50%);
     display: flex;
     justify-content: center;
-    transition: width ease-in-out 0.3s 0.15s, height ease-in-out 0.3s 0.15s;
+    transition: width ease-in-out 0.15s 0.05s, height ease-in-out 0.15s 0.05s;
 }
 
+.Divider > * img {
+    filter: invert(50%) sepia(87%) saturate(415%) hue-rotate(122deg) brightness(110%) contrast(92%);
+}
