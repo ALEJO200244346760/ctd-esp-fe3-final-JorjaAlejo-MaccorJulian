@@ -1,0 +1,48 @@
+.Navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1.3rem;
+}
+
+.Routes {
+    display: flex;
+    list-style: none;
+
+}
+
+.Header {
+    position: relative;
+}
+
+.Routes li {
+    margin: 0 0.8rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+}
+
+/* Navbar Animation */
+
+.Divider {
+    transition: 
+        width ease-in-out 0.3s,
+        box-shadow ease-in-out 0.3s 0.3s
+    ;
+}
+
+.Navbar:hover + .Divider {
+    --shadow-color: color-mix(in srgb, var(--color-accent) 15%, transparent);
+    width: 100%;
+    box-shadow: 0 -15px 40px 15px var(--shadow-color); 
+}
+
+.Navbar:hover + .Divider > * {
+    width: 0;
+    height: 0;
+}
+
+
+.Navbar {
+
+}

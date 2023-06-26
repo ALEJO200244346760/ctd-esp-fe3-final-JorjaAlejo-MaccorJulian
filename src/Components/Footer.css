@@ -1,13 +1,13 @@
-footer.Footer {
+.Footer {
     z-index: 1;
     display: flex;
     align-items: center;
     width: 100%;
     margin-top: 0;
     padding: 5px 40px;
-    height: auto;
-    background-color: var(--color-rainbow-5);
-    border-top: 3px solid var(--color-rainbow-4);
+    height: 70px;
+    background-color: var(--color-paper);
+    border-top: 3px solid var(--color-primary);
     overflow-y: hidden;
 }
 
@@ -36,17 +36,22 @@ footer.Footer {
     padding-left: 15px;
     flex: 1;
     display: flex;
-    gap: 15px;
+    gap: 20px;
 }
 
 .SocialMedia > a > img {
-    height: 25px;
+    height: 20px;
     aspect-ratio: 1/1;
+    transition: filter ease-in-out 0.3s;
+}
+
+.SocialMedia > a:hover > img {
+    filter: invert(50%) sepia(87%) saturate(415%) hue-rotate(122deg) brightness(110%) contrast(92%);
 }
 
 /* Decoration */
 
-footer::before {
+.Footer::before {
     content: "";
     position: absolute;
     top: 0;
@@ -62,7 +67,7 @@ footer::before {
     rotateZ(45deg);
 }
 
-footer::after {
+.Footer::after {
     content: "";
     position: absolute;
     top: 0;
@@ -88,6 +93,15 @@ footer::after {
         translateY(10%)
         rotateZ(15deg)
     ;
+    transition: transform ease-out 0.3s;
+}
+
+.Footer:has(.SocialMedia:hover) .RainbowContainer{
+    transform: 
+        translateX(-100%)
+        translateY(10%)
+        rotateZ(10deg)
+    ;
 }
 
 .RainbowContainer::before {
@@ -106,6 +120,15 @@ footer::after {
         translateY(-5%)
         rotateZ(10deg)
     ;
+    transition: transform ease-out 0.3s;
+}
+
+.Footer:has(.SocialMedia:hover) .RainbowContainer::before{
+    transform: 
+        translateX(0)
+        translateY(-15%)
+        rotateZ(20deg)
+    ;
 }
 
 .RainbowContainer::after {
@@ -123,5 +146,14 @@ footer::after {
         translateX(-10%)
         translateY(-10%)
         rotateZ(20deg)
+    ;
+    transition: transform ease-out 0.3s;
+}
+
+.Footer:has(.SocialMedia:hover) .RainbowContainer::after{
+    transform: 
+        translateX(15%)
+        translateY(-25%)
+        rotateZ(30deg)
     ;
 }

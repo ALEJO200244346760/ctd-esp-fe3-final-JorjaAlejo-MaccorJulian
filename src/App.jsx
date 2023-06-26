@@ -6,13 +6,13 @@ import Navbar from "./Components/Navbar";
 import { Outlet } from "react-router-dom";
 
 // Style
-import css from "./App.module.css";
+import "./App.css";
 
 function App() {
   return (
-      <div className={css.App}>
+      <div className="App">
           <Navbar/>
-          <main>
+          <main style={{padding: 10}}>
             <Outlet/>
           </main>
           <Footer/>

@@ -1,0 +1,38 @@
+.App {
+    --color-primary: #3a66b2;
+    --color-secondary: #3aa2b2;
+    --color-accent: #3ab286;
+    --color-background: #ffffff;
+    --color-paper: #dde4e5;
+    --color-text: #000000;
+
+    --color-rainbow-1: #3aa2b2;
+    --color-rainbow-2: #14ceb5;
+    --color-rainbow-3: #1dc734;
+    --color-rainbow-4: #1eb86b;
+    --color-rainbow-5: #3ab286;
+
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: var(--color-background);
+}
+
+.App:is( .dark ) {
+    --color-primary: #3a66b2;
+    --color-secondary: #3aa2b2;
+    --color-accent: #3ab286;
+    --color-background: #114f57;
+    --color-paper: #dde4e5;
+    --color-text: #000000;
+
+    --color-rainbow-1: #3aa2b2;
+    --color-rainbow-2: rgb(189, 132, 28);
+    --color-rainbow-3: rgb(189, 149, 74);
+    --color-rainbow-4: rgb(154, 147, 54);
+    --color-rainbow-5: #3ab286;
+}
+
+.App > main {
+    flex-grow: 1;
+}

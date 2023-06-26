@@ -1,9 +1,13 @@
-import css from './Footer.module.css'
+// React
+import { memo } from 'react'
+
+// Style
+import './Footer.css'
 
 const Footer = () => {
   return (
-    <footer className={css.Footer}>
-        <section className={css.Student}>
+    <footer className="Footer">
+        <section className="Student">
           <p className='label bold'>Nicolas Cribb</p>
           <div style={{paddingTop: "5px"}}>
             <p className='caption'>Frontend III</p>
@@ -11,8 +15,8 @@ const Footer = () => {
           </div>
         </section>
 
-        <section className={css.DH}>
-          <div className={css.SocialMedia}>
+        <section className="DH">
+          <div className="SocialMedia">
             <a href="https://www.facebook.com" target="_blank" rel="noreferrer">
               <img src="/images/ico-facebook.png" alt='facebook-logo' />
             </a>
@@ -27,15 +31,15 @@ const Footer = () => {
             </a>
           </div>
           
-          <div className={css.Logo}>
+          <div className="Logo">
             <p>Powered by</p>
             <img src="/images/DH.png" alt='DH-logo' />
           </div>
         </section>
 
-        <div className={css.RainbowContainer}></div>
+        <div className="RainbowContainer"></div>
     </footer>
   )
 }
 
-export default Footer
+export default memo(Footer)
