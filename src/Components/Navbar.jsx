@@ -7,8 +7,10 @@ import { Link } from 'react-router-dom'
 // Style
 import "./Navbar.css";
 import Divider from './Divider';
-//Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
+//Context
+import { useUser } from './utils/global.context';
+import { userActions } from './utils/user';
 
 // Routes for the navigation
 const routes = [
@@ -30,7 +32,13 @@ const routes = [
   },
 ];
 
+//Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 const Navbar = () => {
+  const [user, dispatchUser] = useUser();
+
+  const changeTheme = () => {
+    dispatchUser({type: userActions.SET_THEME, payload: user.theme === "light" ? "dark" : "light"})
+  }
 
   return (
     <div className='Header'>
@@ -45,7 +53,7 @@ const Navbar = () => {
         </ul>
 
         {/* Deberan implementar ademas la logica para cambiar de Theme con el button */}
-        <button>Change theme</button>
+        <button onClick={changeTheme}>Change theme</button>
       </nav>
       <Divider variant="primary">
             <div>

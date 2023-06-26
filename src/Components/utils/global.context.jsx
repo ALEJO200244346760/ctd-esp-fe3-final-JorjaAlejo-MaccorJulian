@@ -1,15 +1,16 @@
-import { createContext } from "react";
+import { createContext, useContext, } from "react";
+import useUserReducer from "./user";
 
-export const initialState = {theme: "", data: []}
-
-export const ContextGlobal = createContext(undefined);
+const ContextUser = createContext(undefined);
 
 export const ContextProvider = ({ children }) => {
-  //Aqui deberan implementar la logica propia del Context, utilizando el hook useMemo
 
+  //Aqui deberan implementar la logica propia del Context, utilizando el hook useMemo
   return (
-    <ContextGlobal.Provider value={{}}>
-      {children}
-    </ContextGlobal.Provider>
+      <ContextUser.Provider value={useUserReducer()}>
+        {children}
+      </ContextUser.Provider>
   );
 };
+
+export const useUser = () => useContext(ContextUser);
