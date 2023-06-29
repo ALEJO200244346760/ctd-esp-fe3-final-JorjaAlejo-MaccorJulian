@@ -2,8 +2,8 @@
     --color-primary: #3a66b2;
     --color-secondary: #3aa2b2;
     --color-accent: #3ab286;
-    --color-background: #ffffff;
-    --color-paper: #dde4e5;
+    --color-background: #e1f0f4;
+    --color-paper: #d9faf0;
     --color-text: #000000e5;
 
     --color-rainbow-1: #3aa2b2;
@@ -36,5 +36,7 @@
 
 .App > main {
     flex-grow: 1;
+    display: flex;
+    overflow-y: auto;
 }
 

@@ -16,7 +16,7 @@ function App() {
   return (
       <div className={`App ${user.theme}`}>
           <Navbar/>
-          <main style={{padding: "20px 10px" }}>
+          <main >
             <Outlet/>
           </main>
           <Footer/>

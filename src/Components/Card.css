@@ -1,0 +1,67 @@
+div.card {
+    position: relative;
+    border-color: var(--color-secondary);
+    padding: 1rem;
+    padding-top: 3rem;
+    border-radius: 3px;
+    border-width: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    transition: border-color ease-in-out 0.2s;
+    background-color: var(--color-paper);
+    width: 20%;
+}
+
+div.card:hover {
+    border-color: var(--color-accent);
+    border-width: 2px;
+}
+
+div.card button.favButton {
+    --background : color-mix(in srgb, var(--color-accent) 60%, transparent);
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background-color: var(--background);
+    color: white;
+    border: none;
+    box-shadow: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    transform: translateX(50%) translateY(-50%);
+}
+
+div.card .id {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    transform: translateX(-50%) translateY(-50%);
+    font-weight: bold;
+}
+
+div.card button.favButton > *{
+    fill: white;
+}
+
+.info-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px 
+}
+
+.info-container img {
+    width: 80%;
+    margin: 10px auto;
+    border-radius: 50%;
+    border: 2px solid var(---color-background);
+}

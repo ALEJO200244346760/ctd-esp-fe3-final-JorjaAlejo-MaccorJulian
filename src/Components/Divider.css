@@ -6,7 +6,8 @@
 
 .Divider > * {
     position: absolute;
-    bottom: 0;
+    bottom: 50%;
+    z-index: 10;
     background-color: var(--color-background);
     border-radius: 50%;
     left: 50%;
@@ -15,7 +16,7 @@
     transform: translateX(-50%) translateY(50%);
     display: flex;
     justify-content: center;
-    transition: width ease-in-out 0.15s 0.05s, height ease-in-out 0.15s 0.05s;
+    transition: width ease-in-out 0.15s 0.05s, height ease-in-out 0.15s 0.05s, bottom ease-in-out .15s 0.05s;
 }
 
 .Divider > * img {

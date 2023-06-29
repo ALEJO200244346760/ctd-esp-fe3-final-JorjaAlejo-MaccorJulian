@@ -8,15 +8,23 @@ export const userActions = {
     SET_THEME: "SET_THEME",
 }
 
+const addLike = (state, payload) => {
+    return state.likes.some(like => like.id === payload.id) 
+    ? state 
+    : {...state, likes:  [...state.likes, payload]}
+}
+
+const removeLike = (state, payload) => ({...state, likes: state.likes.filter((item) => item.id !== payload.id)})
+
 const useUserReducer = () => {
-    const [user, dispatch] =useReducer((state, action) => {
-        switch (action.type) {
+    const [user, dispatch] =useReducer((state, {type, payload}) => {
+        switch (type) {
         case userActions.ADD_LIKE:
-            return {...state, likes: [...state.likes, action.payload]};
+            return addLike(state, payload);
         case userActions.REMOVE_LIKE:
-            return state.likes.filter((item) => item.id !== action.payload.id);
+            return removeLike(state, payload);
         case userActions.SET_THEME:
-            return { ...state, theme: action.payload };
+            return { ...state, theme: payload };
         default:
             return state;
         }
