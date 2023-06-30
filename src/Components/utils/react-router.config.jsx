@@ -1,8 +1,5 @@
-import App from "../../App";
-import Home from "../../Routes/Home";
-import Favs from "../../Routes/Favs";
-import Detail from "../../Routes/Detail";
-import Contact from "../../Routes/Contact";
+import { Home, Favs, Detail, Contact } from "Routes";
+import App from "App";
 
 import { createBrowserRouter } from "react-router-dom";
 
@@ -14,14 +11,16 @@ const router = createBrowserRouter([
         {
             path: "/",
             element: <Home />,
+            children: [
+                {
+                    path: "/detail/:id",
+                    element: <Detail />,
+                },
+            ],
         },
         {
             path: "/favs",
             element: <Favs />,
-        },
-        {
-            path: "/detail",
-            element: <Detail />,
         },
         {
             path: "/contact",

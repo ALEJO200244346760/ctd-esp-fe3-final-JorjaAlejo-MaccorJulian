@@ -1,20 +1,34 @@
 import { useMemo, useReducer } from "react";
 
-const initialUser = {likes: [], theme: "light"}
+const initialUser = JSON.parse(localStorage.getItem("user")) ?? {likes: [], theme: "light"}
 
 export const userActions = {
     ADD_LIKE: "ADD_LIKE",
     REMOVE_LIKE: "REMOVE_LIKE",
-    SET_THEME: "SET_THEME",
+    CHANGE_THEME: "SET_THEME",
 }
 
 const addLike = (state, payload) => {
-    return state.likes.some(like => like.id === payload.id) 
+    const newState = state.likes.some(like => like.id === payload.id) 
     ? state 
     : {...state, likes:  [...state.likes, payload]}
+
+    localStorage.setItem("user", JSON.stringify(newState))
+    return newState
 }
 
-const removeLike = (state, payload) => ({...state, likes: state.likes.filter((item) => item.id !== payload.id)})
+const removeLike = (state, payload) => {
+    const newState = {...state, likes: state.likes.filter((item) => item.id !== payload.id)}
+    localStorage.setItem("user", JSON.stringify(newState))
+    return newState
+}
+
+const changeTheme = (state) => {
+    const newState = {...state, theme: state.theme === "light" ? "dark" : "light"}
+
+    localStorage.setItem("user", JSON.stringify(newState))
+    return newState
+}
 
 const useUserReducer = () => {
     const [user, dispatch] =useReducer((state, {type, payload}) => {
@@ -23,8 +37,8 @@ const useUserReducer = () => {
             return addLike(state, payload);
         case userActions.REMOVE_LIKE:
             return removeLike(state, payload);
-        case userActions.SET_THEME:
-            return { ...state, theme: payload };
+        case userActions.CHANGE_THEME:
+            return changeTheme(state);
         default:
             return state;
         }

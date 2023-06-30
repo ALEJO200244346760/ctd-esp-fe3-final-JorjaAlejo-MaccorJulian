@@ -1,16 +1,17 @@
 //React
 import { memo } from 'react'
+import { Divider } from 'Components';
 
 //React Router
 import { Link } from 'react-router-dom'
 
 // Style
 import "./Navbar.css";
-import Divider from './Divider';
+import Moon from 'Icons/Moon.svg';
+import Sun from 'Icons/Sun.svg';
 
 //Context
-import { useUser } from './utils/global.context';
-import { userActions } from './utils/user';
+import { useUser, userActions } from 'Components/utils';
 
 // Routes for the navigation
 const routes = [
@@ -33,7 +34,7 @@ const Navbar = () => {
   const [user, dispatchUser] = useUser();
 
   const changeTheme = () => {
-    dispatchUser({type: userActions.SET_THEME, payload: user.theme === "light" ? "dark" : "light"})
+    dispatchUser({type: userActions.CHANGE_THEME})
   }
 
   return (
@@ -49,7 +50,7 @@ const Navbar = () => {
         </ul>
 
         {/* Deberan implementar ademas la logica para cambiar de Theme con el button */}
-        <button className='btn-theme' onClick={changeTheme}>Change theme</button>
+        <button className='btn-theme' onClick={changeTheme}><img src={user.theme === 'light' ? Sun : Moon}></img></button>
       </nav>
       <Divider variant="primary">
             <div>

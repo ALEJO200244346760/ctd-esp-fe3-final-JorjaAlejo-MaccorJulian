@@ -1,11 +1,10 @@
-import React from "react";
-import Card from "../Components/Card";
-import { useUser } from "../Components/utils/global.context";
+import { Card } from "Components";
+import { useUser } from "Components/utils";
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 const Favs = () => {
-  const [user ] = useUser()
+  const [ user ] = useUser()
   return (
     <>
       <div className="card-grid">

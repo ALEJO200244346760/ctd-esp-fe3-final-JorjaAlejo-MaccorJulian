@@ -1,8 +1,6 @@
-import { createContext, useContext, } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
 import useUserReducer from "./user";
-import { useEffect } from "react";
 import { getAllDentists } from "../api/dentist";
-import { useState } from "react";
 
 const ContextUser = createContext(undefined);
 const ContextApi = createContext(undefined);

@@ -1,9 +1,8 @@
 // Layout Components
-import Footer from "./Components/Footer";
-import Navbar from "./Components/Navbar";
+import { Navbar, Footer } from "Components";
 
 // React
-import { useUser } from "./Components/utils/global.context";
+import { useUser } from "Components/utils";
 
 // React Router
 import { Outlet } from "react-router-dom";
@@ -15,7 +14,7 @@ function App() {
   const [user] = useUser();
   return (
       <div className={`App ${user.theme}`}>
-          <Navbar/>
+          <Navbar />
           <main >
             <Outlet/>
           </main>
