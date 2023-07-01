@@ -1,13 +1,6 @@
-// Layout Components
 import { Navbar, Footer } from "Components";
-
-// React
 import { useUser } from "Components/utils";
-
-// React Router
 import { Outlet } from "react-router-dom";
-
-// Style
 import "./App.css";
 
 function App() {

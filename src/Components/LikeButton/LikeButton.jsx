@@ -1,30 +1,28 @@
 import { userActions, useUser } from "Components/utils/";
-import { getDentistById } from "Components/api/dentist";
 import { memo, useCallback, useMemo } from "react";
 import "./LikeButton.css"
 
-
-export const useLikeButton = (id) => {
+export const useLikeButton = (data) => {
   const [user, dispatchUser] = useUser()
-  const liked = useMemo(() => user.likes.some(like => like.id === id), [user.likes, id])
+  const liked = useMemo(() => user.likes.some(like => like.id === data.id), [user.likes, data])
 
   const handleFav = useCallback((e)=>{
     // Aqui iria la logica para agregar la Card en el localStorage
     e.stopPropagation();
 
     if(liked){
-      dispatchUser({type: userActions.REMOVE_LIKE, payload: {id}})
+      dispatchUser({type: userActions.REMOVE_LIKE, payload: data})
     } else {
-      getDentistById(id).then(res => dispatchUser({type: userActions.ADD_LIKE, payload: res.data}))
+      dispatchUser({type: userActions.ADD_LIKE, payload: data})
     }
-  }, [liked, id])
+  }, [liked, data])
 
   return { liked, handleFav }
 }
 
 
-const LikeButton = ({ id }) => {
-  const {liked, handleFav} = useLikeButton(id)
+const LikeButton = ({ data }) => {
+  const {liked, handleFav} = useLikeButton(data)
   return (
     <button onClick={handleFav} className="circle-button like">{liked ? "❤️" : "🤍"}</button>
   )

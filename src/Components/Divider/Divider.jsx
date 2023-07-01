@@ -1,5 +1,3 @@
-
-// Style
 import { memo } from 'react'
 import './Divider.css'
 

@@ -1,16 +1,9 @@
-//React
 import { memo } from 'react'
 import { Divider } from 'Components';
-
-//React Router
 import { Link } from 'react-router-dom'
-
-// Style
 import "./Navbar.css";
 import Moon from 'Icons/Moon.svg';
 import Sun from 'Icons/Sun.svg';
-
-//Context
 import { useUser, userActions } from 'Components/utils';
 
 // Routes for the navigation
@@ -20,11 +13,11 @@ const routes = [
     name: "Home",
   },
   {
-    path: "/favs",
+    path: "favs/",
     name: "Favs",
   },
   {
-    path: "/contact",
+    path: "contact/",
     name: "Contact",
   },
 ];

@@ -1,7 +1,4 @@
-// React
 import { memo } from 'react'
-
-// Style
 import './Footer.css'
 
 const Footer = () => {

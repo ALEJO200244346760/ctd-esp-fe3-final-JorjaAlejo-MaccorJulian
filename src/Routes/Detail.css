@@ -1,4 +1,5 @@
 dialog {
+    --padding-left: 60px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -7,8 +8,13 @@ dialog {
     border-bottom-width: 5px ;
     background-color: var(--color-paper);
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 3fr;
     grid-template-columns: 2fr 1fr;
+}
+
+dialog .label.name {
+    color: var(--color-primary);
+    font-size: 1.7rem;
 }
 
 .detail-dialog-wrapper {
@@ -28,30 +34,32 @@ dialog {
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: flex-start;
-    padding: 10px 0;
+    padding-top: 10px;
     margin-bottom: 10px;
     border-bottom: 1px solid var(--color-accent);
 }
 
 .dialog-header *:not(.id) {
-    padding-left: 30px ;
+    padding-left: var(--padding-left);
 }
 
 .dialog-header .id {
     position: absolute;
-    left: 0;
+    left: calc(var(--padding-left) / 2);
     top: 50%;
     font-weight: bolder;
     color: var(--color-accent);
-    transform: translateY(-50%);
+    transform: translateY(-50%) translateX(-50%);
     font-size: 2.5rem;
 }
 
 .dialog-body {
     grid-row: 2 / 3;
     grid-column: 1 / 2;
+    margin: auto 0;
+    padding-left: var(--padding-left);
 }
 
 .dialog-sidebar {
@@ -82,4 +90,11 @@ dialog {
     border-radius: 3px;
     width: 300px;
     aspect-ratio: 1 / 1;
+}
+
+.username.caption{
+    font-size: 0.7rem;
+    letter-spacing: 0.15rem;
+    font-weight: bold;
+    margin-left: 2px;
 }

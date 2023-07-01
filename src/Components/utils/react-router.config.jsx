@@ -21,6 +21,12 @@ const router = createBrowserRouter([
         {
             path: "/favs",
             element: <Favs />,
+            children: [
+                {
+                    path: "/favs/detail/:id",
+                    element: <Detail />,
+                },
+            ],
         },
         {
             path: "/contact",

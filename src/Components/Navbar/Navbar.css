@@ -9,7 +9,7 @@
     z-index: -1;
 }
 
-.Navbar:hover {
+.Header:hover .Navbar {
     --background : color-mix(in srgb, var(--color-secondary) 65%, transparent);
     background: var(--background);
 }
