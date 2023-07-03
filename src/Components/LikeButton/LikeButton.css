@@ -20,6 +20,10 @@
     padding: 2px;
 }
 
+.circle-button.info img{
+    height: 100%;
+}
+
 .dialog-sidebar .circle-button.like {
     position: absolute;
     right: 0;
