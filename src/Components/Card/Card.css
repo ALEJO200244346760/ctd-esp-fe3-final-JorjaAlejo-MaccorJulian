@@ -44,7 +44,7 @@ div.card:hover {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 8px 
+    gap: 8px;
 }
 
 .card-body img {

@@ -4,13 +4,13 @@
     justify-content: space-between;
     align-items: center;
     padding: 0.5rem 2rem;
-    background: var(--color-background);
+    background: blue;
     transition: background ease-in-out 0.2s 0.15s;
     z-index: -1;
 }
 
 .Header:hover .Navbar {
-    --background : color-mix(in srgb, var(--color-secondary) 65%, transparent);
+    --background : color-mix(in srgb, blue 65%, transparent);
     background: var(--background);
 }
 
@@ -32,10 +32,9 @@
 
 .Routes li a {
     text-decoration: none;
-    color: var(--color-text);
+    color: white;
 }
 
-/* Navbar Animation */
 
 .Divider {
     transition: 
@@ -45,7 +44,7 @@
 }
 
 .Navbar:hover + .Divider {
-    --shadow-color: color-mix(in srgb, var(--color-accent) 45%, transparent);
+    --shadow-color: color-mix(in srgb, blue 45%, transparent);
     width: 100%;
     box-shadow: 0 -20px 40px 15px var(--shadow-color); 
 }

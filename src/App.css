@@ -18,7 +18,7 @@
     background-color: var(--color-background);
 }
 
-.App:is( .dark ) {
+.App:is(.dark) {
     --color-primary: #4469a8;
     --color-secondary: #13a3b9;
     --color-accent: #06b474;
@@ -39,4 +39,3 @@
     display: flex;
     overflow-y: auto;
 }
-

@@ -5,13 +5,13 @@
     align-items: center;
     justify-content: flex-start;
     height: 60%;
-    max-width: 400px;    
+    max-width: 400px;
 }
 
 .form-wrapper .form-errors {
     font-size: 1.2rem;
     text-align: center;
-    color: rgb(223, 41, 41);
+    color: blue;
 }
 
 .form-wrapper .form-errors > * {
@@ -21,7 +21,7 @@
 .form-wrapper .form-success {
     font-size: 1.2rem;
     text-align: center;
-    color: rgb(80, 212, 46);
+    color: blue;
 }
 
 .form-wrapper form {
@@ -35,24 +35,24 @@
     height: auto;
 }
 
-form label{
+form label {
     display: block;
     font-size: 1.2rem;
-    color: var(--color-text);
+    color: blue;
 }
 
-form input{
+form input {
     min-width: 250px;
     display: block;
     font-size: 1rem;
     margin-top: 0.5rem;
     padding: 0.4rem 0.7rem;
-    border: 1px solid var(--color-text);
+    border: 1px solid blue;
     border-radius: 4px;
-    color: var(--color-text);
+    color: blue;
 }
 
-.App form input[type=submit]{
+.App form input[type=submit] {
     cursor: pointer;
     min-width: auto;
     margin-top: 1rem;
@@ -62,12 +62,12 @@ form input{
     transition: background ease-in-out 0.2s, color ease-in-out 0.2s;
 }
 
-.App form input[type=submit]:not([disabled]):hover{
-    background: var(--color-accent);
-    color: var(--color-background);
+.App form input[type=submit]:not([disabled]):hover {
+    background: blue;
+    color: white;
 }
 
-.App form input[disabled]{
+.App form input[disabled] {
     cursor: auto;
     min-width: auto;
     margin-top: 1rem;
@@ -75,6 +75,6 @@ form input{
     font-size: 1rem;
 }
 
-.App.dark form input{
-    color: var(--color-background);
+.App.dark form input {
+    color: white;
 }

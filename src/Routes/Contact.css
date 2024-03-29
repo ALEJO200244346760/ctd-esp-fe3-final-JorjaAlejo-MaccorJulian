@@ -12,9 +12,9 @@
 }
 
 .contact-title h2 {
-    color: var(--color-primary);
+    color: blue;
 }
 
 .contact-title p {
-    color: var(--color-accent);
+    color: white;
 }

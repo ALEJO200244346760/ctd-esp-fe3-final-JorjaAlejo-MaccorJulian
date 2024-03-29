@@ -9,18 +9,18 @@ body main {
 }
 
 .caption {
-    --color : color-mix(in srgb, rgb(165, 147, 147) 50%, var(--color-text));
+    --color: color-mix(in srgb, rgb(165, 147, 147) 50%, var(--color-text));
     text-align: start;
     font-size: 0.7rem;
     font-weight: bold;
-    color: var(--color);
+    color: white;
     letter-spacing: 0.3rem;
 }
 
 .label {
     text-align: start;
     font-size: 1rem;
-    color: var(--color-text);
+    color: white;
 }
 
 .bold {
@@ -28,10 +28,10 @@ body main {
 }
 
 button.btn-theme {
-    --background: color-mix(in srgb, var(--color-primary) 50%, transparent);
-    --border-color: color-mix(in srgb, var(--color-primary) 80%, transparent);
+    --background: color-mix(in srgb, #3a66b2 50%, transparent); 
+    --border-color: color-mix(in srgb, #3a66b2 80%, transparent); 
     color: white;
-    box-shadow: 0 0 10px -5px var(--color-accent);
+    box-shadow: 0 0 10px -5px #3ab286;
     background-color: var(--background);
     border-top: 1px solid var(--border-color);
     border-right: 1px solid var(--border-color);

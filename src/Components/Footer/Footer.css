@@ -6,10 +6,12 @@
     margin-top: 0;
     padding: 5px 40px;
     min-height: 70px;
-    background-color: var(--color-paper);
-    border-top: 3px solid var(--color-primary);
+    background-color: blue;
+    border-top: 3px solid white;
     overflow-y: hidden;
+    color: white;
 }
+
 
 .Student {
     z-index: 1;
@@ -49,7 +51,6 @@
     filter: invert(50%) sepia(87%) saturate(415%) hue-rotate(122deg) brightness(110%) contrast(92%);
 }
 
-/* Decoration */
 
 .Footer::before {
     content: "";

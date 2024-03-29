@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="Footer">
         <section className="Student">
-          <p className='label bold'>Nicolas Cribb</p>
+          <p className='label bold'>Jorja Alejo - Maccor Julian</p>
           <div style={{paddingTop: "5px"}}>
             <p className='caption'>Frontend III</p>
             <p className='caption'>2023</p>
